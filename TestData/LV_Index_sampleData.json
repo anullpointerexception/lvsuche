@@ -1,0 +1,54 @@
+{
+    "MachineLearning_BIF4": {
+        "Nextcloud Ordner": "",
+        "LV_ID": "MachineLearning_BIF4",
+        "LV Titel": "",
+        "Studiengang": "BIF",
+        "Sem": 4,
+        "Standardisiert": true,
+        "Link zu Nextcloud": "",
+        "Jahr": "21/22",
+        "Ansprechpartner": [
+            "Dregely",
+            "Knapp"
+        ],
+        "Keywords (max 5)": "",
+        "sonstige Kommentare": "Kommentar wow",
+        "LV_Typ": "ILV",
+        "Sprache": "Deutsch",
+        "Literatur": "Geron",
+        "Studi Voraussetzungen": [
+            "Grundlagen python",
+            "Grundlagen programmieren"
+        ],
+        "Programmiersprache": "python",
+        "Coderunner verwendet": null,
+        "LV Info in Nextcloud": null
+    },
+    "AI_BIF2": {
+        "Nextcloud Ordner": "",
+        "LV_ID": "MachineLearning_BIF4",
+        "LV Titel": "",
+        "Studiengang": "BIF",
+        "Sem": 4,
+        "Standardisiert": true,
+        "Link zu Nextcloud": "",
+        "Jahr": "21/22",
+        "Ansprechpartner": [
+            "Dregely",
+            "Knapp"
+        ],
+        "Keywords (max 5)": "",
+        "sonstige Kommentare": "Kommentar wow",
+        "LV_Typ": "ILV",
+        "Sprache": "Deutsch",
+        "Literatur": "Geron",
+        "Studi Voraussetzungen": [
+            "Grundlagen python",
+            "Grundlagen programmieren"
+        ],
+        "Programmiersprache": "python",
+        "Coderunner verwendet": null,
+        "LV Info in Nextcloud": null
+    }
+}
