@@ -1,0 +1,22 @@
+mat-card {
+	width: 100%;
+	height: auto;
+	padding: 1vw;
+}
+
+#keywordaddbtn {
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+.visualization {
+	height: auto;
+}
+
+.mat-card-title	 {
+	margin-top: 2vh;
+}
+
+.input-fh-primary {
+	background-color: blue;
+}

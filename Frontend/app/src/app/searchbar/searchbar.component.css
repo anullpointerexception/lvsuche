@@ -1,0 +1,78 @@
+.keyword-container {
+	margin: 1em;
+}
+
+
+.searchbar-inputfield {
+	background-color: lightgrey;
+	border: 1px solid #7c8585;
+	border-radius: 38px;
+	width: 80%;
+	height: 45px;
+	font-size: 25px;
+	padding-left: 25px;
+}
+
+
+.searchbar-icons {
+	height: 58px;
+}
+
+.searchbar-input-form {
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.searchbar-input-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+
+.keyword-search-mask {
+	width: 10%;
+}
+
+
+.fh-primary {
+	background-color: #00659c;
+	color: white;
+}
+
+.keyword-chip-list {
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-bottom: 1%;
+}
+
+.keyword-search-mask h2,
+input,
+button {
+	font-size: 12px;
+}
+
+/* ---- checkbox color ---- */
+
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+	background-color: #00659c !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+	background-color: #00659c !important;
+}
+
+::ng-deep .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+	background-color: #00659c !important;
+}
+
+.box {
+	display: flex;
+	align-items: stretch;
+}
+
+.spaced-td {
+	padding: 10px;
+}

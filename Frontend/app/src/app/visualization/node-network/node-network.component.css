@@ -1,0 +1,34 @@
+.node-class {
+  width: auto;
+  height: 18rem;
+  justify-content: center;
+}
+
+/* full screen class */
+.node-class-fullscreen {
+  z-index: 9999; 
+  width: 80%; 
+  height: 80%; 
+  position: fixed; 
+  top: 10%; 
+  left: 10%;
+  background-color: white;
+  border: 1px solid grey;
+}
+
+
+/* to align the icon next to the text */
+.prefix {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.closeButton {
+
+  background-color: rgb(138, 36, 36);
+  border-color:rgb(72, 9, 9);
+  margin-top: 5px;
+
+}
+

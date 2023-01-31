@@ -1,0 +1,32 @@
+mat-form-field {
+    width: 100%;
+    color: grey;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    color: #00698e !important;
+}
+
+::ng-deep.mat-form-field-underline {
+    background-color: #00698e !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+    background-color: #00698e !important;
+}
+
+.button-blue-bg-white {
+    color: white;
+    background-color: #00698e !important;
+}
+
+mat-spinner {
+    margin:auto;
+}
+
+mat-card {
+    width: 35%;
+    margin: auto;
+    margin-top: 20vh;
+    margin-bottom: 40vh;
+}

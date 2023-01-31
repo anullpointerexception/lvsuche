@@ -1,0 +1,66 @@
+.table-row {
+    text-align: start;
+}
+
+td {
+    justify-content:left;
+    align-items: left;
+    text-align: left;
+}
+
+.table-class {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    font-weight: 200;
+}
+
+.table-class th, td{
+    width: 15%;
+    text-align: center;
+}
+
+.treetable-class {
+    padding: 10%;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    font-weight: 200;
+}
+
+/* mat-tree {
+    padding-top: 1%;
+} */
+/*
+.treetable-class mat-tree-node {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 2px;
+} */
+
+.treeroot { /* trying to make only roots have upper border*/
+    border-top: 2px solid lightgrey;
+    /* border-bottom: 1px solid lightgrey;  */
+}
+
+.treebranch { /* trying to make only roots have upper border*/
+    border-top: 1px solid lightgrey; 
+}
+
+.mat-elevation-z8 {    
+    overflow-x: auto;
+}
+
+
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.author-padding-left {
+    padding-left: 2rem;
+}

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: 'Montserrat' }
+
+.fh-primary-bg {
+    background-color: #00698e;
+    color: white;
+}
+
+.fh-primary-input {
+    background-color: #00698e;
+    color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    border-color: #00698e;
+}

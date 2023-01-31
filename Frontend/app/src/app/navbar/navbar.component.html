@@ -1,0 +1,25 @@
+<mat-toolbar class="toolbar">
+<!-- ich wollte nur dass das wieder zu Home führt. Ob das eine gute Lösung ist idk -->
+<a href="#">
+    <img src="../../assets/logo_technikum.png" class="logo">
+    <span class="title">FH Technikum Wien LV Suche</span>
+</a>
+    
+<div class="link-toolbar">
+
+</div>
+
+<div [ngSwitch]="menuType">
+<div *ngSwitchCase="'default'">
+<a mat-button href="#"  class="title">Home</a>
+<a mat-button routerLink="/login" class="title">Login</a>
+<a mat-button class="title">Settings</a>
+</div>
+<div *ngSwitchCase="'authenticated'">
+    <a mat-button href="#"  class="title">Home</a>
+    <a mat-button routerLink="/logout" class="title">Logout</a>
+    <a mat-button class="title">Settings</a>
+    <a mat-button class="title">{{username}}</a>
+    </div>
+</div>
+</mat-toolbar>

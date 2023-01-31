@@ -2,7 +2,7 @@
     "MachineLearning_BIF4": {
         "Nextcloud Ordner": "",
         "LV_ID": "MachineLearning_BIF4",
-        "LV_Titel": "Test",
+        "LV Titel": "Test1",
         "Studiengang": "BIF",
         "Sem": 4,
         "Standardisiert": true,
@@ -28,7 +28,7 @@
     "AI_BIF2": {
         "Nextcloud Ordner": "",
         "LV_ID": "MachineLearning_BIF4",
-        "LV_Titel": "Test2",
+        "LV Titel": "Test2",
         "Studiengang": "BIF",
         "Sem": 4,
         "Standardisiert": true,

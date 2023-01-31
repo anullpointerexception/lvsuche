@@ -1,0 +1,38 @@
+<div class="content" role="main">
+	<div class="card-container">
+		<app-searchbar></app-searchbar>
+		<mat-grid-list cols="4" rowHeight="500px" style="height:100%; width: 100%;">
+			<mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+				[style.background]="tile.color" style="height:100%;">
+				<app-result-table *ngIf="tile.text === 'resultTable'"
+					style="height:100%;width: 100%;"></app-result-table>
+				<app-result-details *ngIf="tile.text === 'resultDetail'"
+					style="height:100%;width: 100%;"></app-result-details>
+			</mat-grid-tile>
+		</mat-grid-list>
+
+
+	</div>
+
+
+
+	<input type="hidden" #selection>
+
+	<div class="card-container">
+
+	</div>
+
+	<!-- Terminal -->
+
+	<!-- Links -->
+	<div class="card-container">
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+
+	</footer>
+
+
+</div>

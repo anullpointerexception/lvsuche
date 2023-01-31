@@ -1,0 +1,21 @@
+<mat-card>
+	<mat-spinner *ngIf="isLoading"></mat-spinner>
+	<form *ngIf="!isLoading">
+		<h2>Anmelden</h2>
+		<mat-form-field appearance="fill">
+			<mat-label>E-Mail/Benutzername</mat-label>
+			<input matInput [formControl]="email" type="email" placeholder="E-Mail">
+			<mat-error>Bitte eine valide E-mail eingeben.</mat-error>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Passwort eingeben</mat-label>
+			<input matInput [formControl]="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
+			<button mat-icon-button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+				[attr.aria-pressed]="hide">
+				<mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+			</button>
+			<mat-error>Bitte geben Sie ein Passwort ein.</mat-error>
+		</mat-form-field>
+		<button mat-raised-button color="button-blue-bg-white" type="submit" (click)="login()">Login</button>
+	</form>
+</mat-card>

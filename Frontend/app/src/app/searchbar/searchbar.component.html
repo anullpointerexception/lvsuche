@@ -1,0 +1,60 @@
+<form #searchbarInputForm="ngForm">
+	<div class="searchbar-input-container">
+		<span matPrefix></span>
+		<input class="searchbar-inputfield" type="text" matInput placeholder="Suche..." name="search"
+			[(ngModel)]="search">
+		<button matSuffix mat-button>
+			<br>
+			<mat-icon class="searchbar-icons">search</mat-icon>
+		</button>
+	</div>
+	<mat-expansion-panel hideToggle>
+		<mat-expansion-panel-header>
+			<mat-panel-description class="filter-title">
+				Click to expand filters.
+			</mat-panel-description>
+		</mat-expansion-panel-header>
+
+
+		<table style="width: 100%">
+			<tr *ngFor="let row of filterSet2; let i = index; let c = count; trackBy: trackByFn">
+				<td class="spaced-td" *ngFor="let item of row; let j = index;">
+					<input type="checkbox" [value]="item.isChecked" [id]="item.id" (click)="onChangeFilter($event)">
+					{{item.label}}
+				</td>
+			</tr>
+		</table>
+		<div class="keyword-container">
+			<mat-card-title>Add Keywords to search</mat-card-title>
+			<span>
+				<div class="keyword-list">
+					<mat-chip-list #chipList aria-label="Keyword selection">
+						<mat-chip *ngFor="let keyword of listOfKeywords"
+							(removed)="remove(keyword)" class="fh-primary">
+							<input matInput placeholder="{{ keyword }}" value="{{ keyword }}" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" />
+							#{{ keyword }}
+							<button matChipRemove [attr.aria-label]="'remove ' + keyword">
+								<mat-icon>cancel</mat-icon>
+							</button>
+						</mat-chip>
+					</mat-chip-list>
+					<button id="keywordaddbtn" (click)="toggleAddKeywordForm()" mat-mini-fab color="blue" aria-label="Example icon button with a plus one icon">
+					<mat-icon id="keywordaddbtnicon">add</mat-icon>
+				</button>
+			</div>
+		</span>
+		<div class="keywordadd-container">
+			<form [hidden]="addKeywordIsHidden" (ngSubmit)="onSubmit()" #formName="ngForm" class="keyword-search-mask">
+				<mat-form-field appearance="fill">
+					<mat-label>Add Keyword</mat-label>
+					<input matInput placeholder="keyword" [matChipInputFor]="chipList"
+					[matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="add($event)" />
+				</mat-form-field>
+			</form>
+		</div>
+	</div>
+
+
+
+	</mat-expansion-panel>
+</form>

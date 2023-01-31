@@ -1,0 +1,71 @@
+<div #sidecontainer class="content" role="main">
+	<input type="button" (click)="wordCloud = true" class="btn btn-primary fh-primary-input" value="Word Cloud">
+	<input type="button" (click)="wordCloud = false" class="btn btn-primary fh-primary-input" value="Node Network">
+
+	<mat-card class="visualization">
+		<app-node-network *ngIf="!wordCloud"></app-node-network>
+		<app-word-cloud #wordCloud *ngIf="wordCloud"></app-word-cloud>
+	</mat-card>
+	<div class="card-container">
+		<mat-card>
+			<div>
+				<mat-card-title>{{ SelectedItem != null && SelectedItem.name != null ? SelectedItem.name : "" }}</mat-card-title>
+				<mat-card-subtitle>Details</mat-card-subtitle>
+			</div>
+			<mat-card-content>
+				<div *ngIf="SelectedItem != null && SelectedItem.fileType != null ? SelectedItem.fileType == 'pdf' : ''">
+					<mat-card-subtitle>Filetype: PDF File</mat-card-subtitle>
+				</div>
+				<div *ngIf="SelectedItem != null && SelectedItem.fileType != null ? SelectedItem.fileType == 'py' : ''">
+					<mat-card-subtitle>Filetype: Python File</mat-card-subtitle>
+				</div>
+				<div *ngIf="SelectedItem != null && SelectedItem.fileType != null ? SelectedItem.fileType == 'js' : ''">
+					<mat-card-subtitle>Filetype: JavaScript File</mat-card-subtitle>
+				</div>
+				<div>
+					Studiengänge: {{ SelectedItem.studiengang }}
+				</div>
+				<div>
+					Jahr: {{ SelectedItem.year }}
+				</div>
+				<br>
+				<br>
+				<mat-card-title>Keywords</mat-card-title>
+				<span>
+					<div class="keyword-chip-list">
+						<mat-chip-list #chipList aria-label="Keyword selection">
+							<mat-chip (click)="toggleEditKeyword()" *ngFor="let keyword of SelectedItem.keywords"
+								(removed)="remove(keyword)" class="fh-primary">
+								<input [hidden]="isEditKeywordHidden" matInput placeholder="{{ keyword }}"
+									value="{{ keyword }}" [matChipInputFor]="chipList"
+									[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+									(matChipInputTokenEnd)="editKeyword($event, keyword)" />
+								#{{ keyword }}
+								<button matChipRemove [attr.aria-label]="'remove ' + keyword">
+									<mat-icon>cancel</mat-icon>
+								</button>
+							</mat-chip>
+						</mat-chip-list>
+						<button id="keywordaddbtn" (click)="toggleAddKeywordForm()" mat-mini-fab color="blue"
+							aria-label="Add Keywords">
+							<mat-icon id="keywordaddbtnicon">add</mat-icon>
+						</button>
+					</div>
+				</span>
+				<span>
+					<div class="keywordadd-container">
+						<form [hidden]="addKeywordIsHidden" (ngSubmit)="onSubmit()" #formName="ngForm"
+							class="keyword-search-mask">
+							<mat-form-field appearance="fill">
+								<mat-label>Add Keyword</mat-label>
+								<input matInput placeholder="keyword" [matChipInputFor]="chipList"
+									[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+									(matChipInputTokenEnd)="add($event)" />
+							</mat-form-field>
+						</form>
+					</div>
+				</span>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>
